@@ -1,16 +1,20 @@
+import Advertisement from "@/libs/components/homepage/Advertisement";
+import PopularProperties from "@/libs/components/homepage/PopularProperties";
+import TopAgents from "@/libs/components/homepage/TopAgents";
+import TopProperties from "@/libs/components/homepage/TopProperties";
+import TrendProperties from "@/libs/components/homepage/TrendProperties";
 import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Box, Container, Stack } from "@mui/material";
 import { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <Stack>
-      <Stack flexDirection={"column"}>
-        <Box>Popular Properties</Box>
-        <Box>Top Agents</Box>
-        <Box>Top Properties</Box>
-        <Box>Events</Box>
-      </Stack>
+    <Stack className="home-page">
+      <TrendProperties />
+      <PopularProperties />
+      <Advertisement />
+      <TopProperties />
+      <TopAgents />
     </Stack>
   );
 };
